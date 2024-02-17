@@ -3,8 +3,9 @@ import { createClient, repositoryName } from "@/prismicio";
 import { Nunito, Nunito_Sans } from "next/font/google";
 import './globals.css'
 import clsx from "clsx";
-import { CreateClient } from "@prismicio/client";
 import { Metadata } from "next";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 
 const nunito = Nunito({
@@ -50,9 +51,9 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <header>Header</header>
+        <Header />
         {children}
-        <footer>footer</footer>
+        <Footer />
         <PrismicPreview repositoryName={repositoryName} />
       </body>
     </html>
